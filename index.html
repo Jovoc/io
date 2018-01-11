@@ -16,6 +16,7 @@
     }  
    
     function showError(error) {  
+        console.log(error);;
         switch (error.code) {  
         case error.PERMISSION_DENIED:  
             x.innerHTML = "用户拒绝对获取地理位置的请求。";  
