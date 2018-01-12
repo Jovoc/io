@@ -3,7 +3,6 @@
         <title>获取所在城市</title>
         <meta charset="UTF-8" />
         <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xtHEuiIPQtXSwsqwu5sIa9qvsvTVP7zr"></script>
-        <script type="text/javascript" src="https://api.map.baidu.com/location/ip"></script>
     </head>
     <body>
         <p>
@@ -12,7 +11,6 @@
         <p>
             I guess your city is <b id="lbCity"></b>
         </p>
-        <div id="x"></div>
         <script type="text/javascript">  
             var geolocation = new BMap.Geolocation();
             geolocation.getCurrentPosition(function(r){
