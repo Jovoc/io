@@ -1,5 +1,24 @@
+<html>
+    <head>
+        <title>
+            获取所在城市
+        </title>
+    </head>
+    <body>
+        <p>
+            Hi,guy!Here is your location :<b id="lbLocation"></b>
+        </p>
+        <p>
+            Your IP is :<b id="lbIP"></b>
+        </p>
+        <p>
+            I guess your city is <b id="lbCity"></b>
+        </p>
+    </body>
+</html>
 <div id="x"></div>
 <script type="text/javascript">  
+    console.log(navigator.geolocation);
     var x = document.getElementById("x");  
    
     function getLocation() {  
@@ -13,7 +32,7 @@
     function showPosition(position) {  
         x.innerHTML = "纬度：" + position.coords.latitude + "\n经度："  
                 + position.coords.longitude;  
-    }  
+    }
    
     function showError(error) {  
         console.log(error);;
@@ -28,9 +47,8 @@
             x.innerHTML = "请求用户地理位置超时。";  
             break;  
         case error.UNKNOWN_ERROR:  
-            x.innerHTML = "未知错误。";  
+            x.innerHTML = "未知错误。";
             break;  
-   
         }  
     }  
     getLocation();  
